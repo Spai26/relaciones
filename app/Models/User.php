@@ -41,4 +41,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /*
+     * relation 1 to 1 Usuario (User) - Perfil (Profile)
+     !importante Me interesa ver desde el usuario acceder al perfil.
+    */
+    public function profile()
+    {
+        return $this->hasOne(Profile::class);
+    }
 }
