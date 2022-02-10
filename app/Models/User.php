@@ -50,4 +50,10 @@ class User extends Authenticatable
     {
         return $this->hasOne(Profile::class);
     }
+
+    /**
+     * !importante  Un usuario pertenece a  un nivel  */
+    public function level(){
+        return $this->belongsTo(Level::class);
+    }
 }
