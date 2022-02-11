@@ -86,3 +86,5 @@ Se puede apreciar todas las migraciones con:
 las relaciones correspondiente se encuentra dentro de los commit
 
     [Git log --oneline --graph]
+
+las tablas polimorficas puede trabajar con muchas tablas al mismo tiempo
