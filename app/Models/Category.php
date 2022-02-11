@@ -11,7 +11,7 @@ class Category extends Model
 
     /**
      * !importante Relation Categoria (Category) - Articulos (Post)
-     *
+     **Una categoria tiene muchos ...
      */
     public function posts(){
         return $this->hasMany(Post::class);
@@ -19,7 +19,6 @@ class Category extends Model
 
       /**
      * !importante Relation Categoria (Category) - Video (video)
-     *
      */
     public function videos(){
         return $this->hasMany(Video::class);
