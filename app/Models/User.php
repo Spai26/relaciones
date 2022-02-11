@@ -51,9 +51,22 @@ class User extends Authenticatable
         return $this->hasOne(Profile::class);
     }
 
-    /**
-     * !importante  Un usuario pertenece a  un nivel  */
-    public function level(){
+    /*
+     * relation 1 to m User - Level
+     !importante  Un usuario pertenece a  un nivel  */
+    public function level()
+    {
         return $this->belongsTo(Level::class);
+    }
+
+    /*
+    * relation m to m  User - Group
+    !importante  Un usuario pertenece a  varios  un grupos
+    * withtemestamp nos facilita el registro de fecha
+    */
+
+    public function groups()
+    {
+        return $this->belongsToMany(Group::class)->withTimestamps();
     }
 }
