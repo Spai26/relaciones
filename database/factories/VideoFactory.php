@@ -14,7 +14,9 @@ class VideoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->sentence(),
+            'user_id' => rand(1,5),
+            'category_id' => rand(1,4),
         ];
     }
 }
